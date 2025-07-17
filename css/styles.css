@@ -1,3 +1,8 @@
+/* region basic */
+
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: Roboto, sans-serif;
   color: #434455;
@@ -37,8 +42,7 @@ button {
 
 .container {
   max-width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px 0 15px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -47,6 +51,22 @@ button {
   padding: 120px 0;
   margin: 0 auto;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1;
+  height: 1;
+  margin: -1;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* region basic end */
+
 /* region header */
 header {
   background-color: #ffffff;
@@ -73,6 +93,7 @@ header .container {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   align-items: center;
+  margin-right: 76px;
 }
 
 .studio {
@@ -87,7 +108,6 @@ header .container {
 
 .navigation {
   display: flex;
-  gap: 76px;
   align-items: center;
 }
 
@@ -144,12 +164,12 @@ header .container {
 .order-section {
   background-color: #2e2f42;
   color: #ffffff;
+  padding: 188px 0;
 }
 .order-container {
   max-width: 500px;
   height: 600px;
-  padding-top: 188px;
-  padding-bottom: 188px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -162,6 +182,7 @@ header .container {
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
+  max-width: 496px;
 }
 .order-btn {
   background-color: #4d5ae5;
@@ -173,6 +194,9 @@ header .container {
   border-radius: 4px;
   padding: 16px 32px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  min-width: 169px;
+  height: 56px;
+  border: none;
 }
 .order-btn:hover,
 .order-btn:focus {
@@ -182,11 +206,6 @@ header .container {
 
 /* region info-section */
 
-.info-container {
-  width: 1128px;
-  height: 104px;
-  padding: 120px 156px;
-}
 .info-section .list-item-title {
   color: #2e2f42;
   font-weight: 500;
@@ -218,12 +237,12 @@ header .container {
   justify-content: flex-start;
   flex-direction: column;
   gap: 8px;
-  width: 264px;
-  height: 104px;
+  flex-basis: calc((100% - 24px) / 3);
 }
 
 .info-title {
   color: #ffffff;
+  margin-bottom: 8px;
 }
 
 .info-item-title {
@@ -263,11 +282,9 @@ header .container {
   font-size: 20px;
 }
 
-.team-container {
-  padding: 232px 156px 120px 156px;
-}
 .team-title {
   color: #f4f4fd;
+  margin-bottom: 72px;
 }
 .team-list {
   display: flex;
@@ -275,15 +292,18 @@ header .container {
   justify-content: center;
   flex-direction: row;
   gap: 24px;
-  border-radius: 0 0 4px 4px;
 }
 .team-items {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  border-radius: 0 0 4px 4px;
+  flex-basis: calc((100% - 72px) / 4);
 }
-
+.team-card-text {
+  padding: 32px 0;
+}
 .team-item-title {
   font-weight: 500;
   font-size: 20px;
@@ -291,6 +311,7 @@ header .container {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 .team-text {
   font-weight: 400;
@@ -321,36 +342,33 @@ header .container {
   line-height: 1.2;
 }
 
-.portfolio-container {
-  display: flex;
-  flex-direction: column;
-  padding: 120px 156px;
-
-  align-items: flex-start;
-  justify-content: center;
-  gap: 72px;
-}
 .portfolio-title {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.11111;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  margin-bottom: 72px;
 }
 .portfolio-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 48px;
   gap: 24px;
-  align-items: flex-start;
+  align-content: flex-start;
 }
 .portfolio-items {
-  border-bottom: 1px solid #e7e9fc;
-  border-left: 1px solid #e7e9fc;
-  border-right: 1px solid #e7e9fc;
+  width: calc((100% - 48px) / 3);
 }
 .portfolio-icons {
   width: 100%;
+}
+.portfolio-card-text {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
 }
 .portfolio-item-title {
   font-weight: 500;
@@ -358,6 +376,7 @@ header .container {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 .portfolio-text {
   text-align: center;
@@ -373,6 +392,7 @@ header .container {
 .footer {
   background-color: #2e2f42;
   color: #f4f4fd;
+  padding: 100px 0;
 }
 .footer-text {
   line-height: 1.5;
@@ -390,10 +410,8 @@ header .container {
   text-transform: uppercase;
 }
 
-.footer-container {
-  width: 1440px;
-  height: 312px;
-  padding-top: 100px;
-  padding-bottom: 100px;
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 16px;
 }
 /* region footer end */
