@@ -54,16 +54,7 @@ button {
 
 .visually-hidden {
   position: absolute;
-  width: 1;
-  height: 1;
-  margin: -1;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  visibility: hidden;
 }
 /* region basic end */
 
@@ -90,6 +81,7 @@ header .container {
   text-transform: uppercase;
   align-items: center;
   margin-right: 76px;
+  padding: 24px 0;
 }
 
 .studio {
@@ -100,7 +92,6 @@ header .container {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  padding: 24px 0;
 }
 
 .navigation {
