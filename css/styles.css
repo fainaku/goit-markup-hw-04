@@ -69,7 +69,6 @@ button {
 
 /* region header */
 header {
-  background-color: #ffffff;
   border-bottom: 1px solid #e7e9fc;
 }
 header .container {
@@ -118,7 +117,7 @@ header .container {
 
 .nav-link {
   color: #2e2f42;
-  font-size: 16px;
+
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -135,7 +134,6 @@ header .container {
 }
 
 .address-list {
-  font-weight: 400;
   display: flex;
   gap: 40px;
 }
@@ -145,7 +143,6 @@ header .container {
 }
 .contact {
   color: #434455;
-  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   display: flex;
@@ -165,9 +162,6 @@ header .container {
   padding: 188px 0;
 }
 .order-container {
-  max-width: 500px;
-  height: 600px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -176,7 +170,6 @@ header .container {
 }
 .order-title {
   font-size: 56px;
-  font-weight: 700;
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
@@ -230,12 +223,7 @@ header .container {
   gap: 24px;
 }
 .info-items {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: 8px;
-  flex-basis: calc((100% - 24px) / 3);
+  width: calc((100% - 24px) / 3);
 }
 
 .info-item-title {
@@ -248,12 +236,12 @@ header .container {
 }
 
 .info-text {
-  font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
 }
 /* region info-section end */
+
 /* region team-section */
 .team-section {
   background-color: #f4f4fd;
@@ -277,7 +265,7 @@ header .container {
 }
 
 .team-title {
-  color: #f4f4fd;
+  color: #2e2f42;
   margin-bottom: 72px;
 }
 .team-list {
@@ -288,10 +276,6 @@ header .container {
   gap: 24px;
 }
 .team-items {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   border-radius: 0 0 4px 4px;
   flex-basis: calc((100% - 72px) / 4);
 }
@@ -308,14 +292,13 @@ header .container {
   margin-bottom: 8px;
 }
 .team-text {
-  font-weight: 400;
-  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
   color: #434455;
 }
 /* region team-section end */
+
 /* region portfolio-section */
 .portfolio-section .section-title {
   font-size: 36px;
@@ -337,7 +320,6 @@ header .container {
 }
 
 .portfolio-title {
-  font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
@@ -374,8 +356,6 @@ header .container {
 }
 .portfolio-text {
   text-align: center;
-  font-weight: 400;
-  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
